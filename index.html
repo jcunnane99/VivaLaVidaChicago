@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viva La Vida Chicago | Tribute Band</title>
+  <meta name="description" content="Viva La Vida Chicago — Tribute Band. Live shows, private events, festivals. Booking now." />
+
+  <!-- Open Graph Preview -->
+  <meta property="og:title" content="Viva La Vida Chicago" />
+  <meta property="og:description" content="Chicago Tribute Band — Booking Now." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Subtle stage glow */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 6s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      max-width: 900px;
+    }
+
+    .logo {
+      max-width: 500px;
+      width: 85%;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 40px;
+      border: 1px solid #fff;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    .social {
+      margin-top: 25px;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .social a {
+      color: white;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .social a:hover {
+      opacity: 1;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 18px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        max-width: 320px;
+      }
+      h1 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <img src="assets/VLV Chicago.jpeg" alt="Viva La Vida Chicago Logo" class="logo">
+
+    <h1>Coming Soon • Chicago Tribute Band</h1>
+
+    <div class="buttons">
+      <a class="btn" href="mailto:YOURBOOKINGEMAIL@domain.com?subject=Booking%20Inquiry%20—%20Viva%20La%20Vida%20Chicago">
+        Book the Band
+      </a>
+    </div>
+
+    <div class="social">
+      <a href="https://instagram.com/YOURHANDLE" target="_blank">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> Viva La Vida Chicago
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
